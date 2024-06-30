@@ -1,0 +1,40 @@
+{% include 'layout.html'%}
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            Your Profile!
+        </div>
+        <div class="card-body">
+        <table class="table table-hover">
+        <tbody>
+            <tr class="pointer">
+                  <td>Username/email : </td>
+                  <td>{{user.email}}</td>
+            </tr>
+            <tr class="pointer">
+                <td>First name : </td>
+                <td>{{user.first_name}}</td>
+            </tr>
+            <tr class="pointer">
+                <td>Last name : </td>
+                <td>{{user.last_name}}</td>
+          </tr>
+          <tr class="pointer">
+            <td>Role : </td>
+            <td>{{user.role}}</td>
+          </tr>
+          <tr class="pointer">
+            <td>Is Active: </td>
+            <td>{{user.is_active}}</td>
+          </tr>
+        </tbody>    
+        </table>
+        <div class="card-footer text-muted">
+            <a href="/user/change_password"> Change password </a>
+        </div>
+
+        <button onclick="window.location.href='/home'" 
+        type="button" class="btn btn-info">Bact to Home</button>
+        </div>
+    </div>
+</div>
